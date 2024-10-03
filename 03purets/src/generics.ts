@@ -42,3 +42,28 @@ const getMoreSeachProducts = <T>(products: T[]): T => {
     //do some database operations
     return products[0];
 }
+
+function anotherFunction<T, U extends Brand>(val: T, val2: U): object
+{
+    return {val, val2};
+}
+
+anotherFunction('One', {type:'abcd',name:'lklkkl'});
+
+interface Quiz {
+    name: string,
+    type: number
+}
+
+interface Course {
+    subject: string,
+    teacher: string
+}
+
+class Sellable<T>{
+    public cart: T[] = [];
+
+    addToCart(val: T){
+        this.cart.push(val);
+    }
+}
