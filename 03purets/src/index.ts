@@ -24,6 +24,7 @@ const ambuj = new User('Ambuj Kumar', 'ambuj@abcd.com');
 class Admin {
     private city: string = "Faridabad";
     private _count: number = 1;
+    public _courseCount: number = 1;
 
     constructor(
         public name: string,
@@ -52,6 +53,14 @@ class Admin {
     get getCount(): number
     {
         return this._count;
+    }
+}
+
+class SubUser extends Admin {
+    isFamily: boolean = true;
+
+    changeCourseCount(){
+        this._courseCount = 4;
     }
 }
 
